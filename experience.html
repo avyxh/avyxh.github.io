@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Experience | Avyukth Harish</title>
-  <meta name="description" content="Work experience of Avyukth Harish: Coinbase, Google DeepMind, and Arista Networks.">
+  <meta name="description" content="Work experience of Avyukth Harish: Google DeepMind, Coinbase, and Arista Networks.">
   <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,9 +35,10 @@
       <div class="role-body">
         <h2 class="role-name">Google DeepMind</h2>
         <p class="role-title">Software Engineer (Contract) <span class="tag">February 2026 to present</span></p>
-        <p>Built an agentic framework and a graph package that automate the input and output stitching between state-of-the-art bioML models.</p>
-        <p>Published a PyPI package and a tool registry for bioinformatics software engineering pipelines, which was used to automate 10+ pipelines.</p>
-        <p>Currently work on utilizing Google's AI co-scientist to form and validate hypotheses with our graph package.</p>
+        <ul>
+          <li>Built an agentic framework and a graph package that automate input and output stitching between state-of-the-art bioML models, and published a PyPI package and tool registry for bioinformatics pipelines that automated 10+ of them.</li>
+          <li>Currently use Google's AI co-scientist, grounded in our graph package, to generate and validate hypotheses over the connected model outputs.</li>
+        </ul>
       </div>
     </article>
     <article class="card role" id="coinbase">
@@ -45,13 +46,9 @@
       <div class="role-body">
         <h2 class="role-name">Coinbase</h2>
         <p class="role-title">Data Engineer Intern <span class="tag">May 2026 to August 2026</span></p>
-        <h3>Recommendation ranking</h3>
-        <p>Existing ranking model scored each user and asset pair on its own with binary cross-entropy. I replaced this with a contrastive InfoNCE objective over user and asset embeddings, which naturally compares pairings within a batch. This in theory helps improve MRR (mean reciprocal rank).</p>
-        <p>The negatives matter as much as the loss. In-batch negatives are mostly easy, so I added negatives chosen to be hard for the model instead of relying on the batch alone. Together this improved MRR by 50% over the binary cross-entropy baseline.</p>
-        <h3>Data infrastructure</h3>
         <ul>
-          <li>Built agentic automation of column-level security workflows in Snowflake, along with an embedding-based classifier that finds PII columns so they can be masked.</li>
-          <li>Flagged 50+ redundant tables with a deterministic detection engine and a headless Claude agent, cutting clutter in the warehouse.</li>
+          <li>Replaced a pointwise binary cross-entropy ranker with a contrastive InfoNCE objective over user and asset embeddings, using mined hard negatives instead of in-batch negatives alone, which improved MRR by 50% over the baseline.</li>
+          <li>Built data infrastructure for Snowflake: agentic automation of column-level security with an embedding-based PII classifier for masking, and a deterministic detection engine plus headless Claude agent that flagged 50+ redundant tables.</li>
         </ul>
       </div>
     </article>
