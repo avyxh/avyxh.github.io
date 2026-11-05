@@ -35,9 +35,9 @@
       <div class="role-body">
         <h2 class="role-name">Google DeepMind</h2>
         <p class="role-title">Software Engineer (Contract) <span class="tag">February 2026 to present</span></p>
-        <p>Helped build an agentic framework and a graph package that automate the input and output stitching between state-of-the-art bioML models, so an agent can chain them into a pipeline instead of someone wiring each one by hand.</p>
-        <p>We publisehd a PyPI package and a tool registry for bioinformatics software engineering pipelines, which was used to automate 10+ pipelines.</p>
-        <p>I currently work on utilizing Google's AI co-scientist to form and validate hypotheses with our graph package.</p>
+        <p>Helped build an agentic framework and a graph package that automate the input and output stitching between state-of-the-art bioML models.</p>
+        <p>Publisehd a PyPI package and a tool registry for bioinformatics software engineering pipelines, which was used to automate 10+ pipelines.</p>
+        <p>Currently work on utilizing Google's AI co-scientist to form and validate hypotheses with our graph package.</p>
       </div>
     </article>
     <article class="card role" id="coinbase">
@@ -46,14 +46,13 @@
         <h2 class="role-name">Coinbase</h2>
         <p class="role-title">Data Engineer Intern <span class="tag">May 2026 to August 2026</span></p>
         <h3>Recommendation ranking</h3>
-        <p>I worked on ranking for asset recommendations. The existing model scored each user and asset pair on its own with binary cross-entropy. I replaced it with a contrastive InfoNCE objective over user and asset embeddings, which turns the problem into picking the right asset out of a set of candidates. That is the same shape as the ranking metric we cared about, mean reciprocal rank.</p>
+        <p>Existing ranking model scored each user and asset pair on its own with binary cross-entropy. I replaced this with a contrastive InfoNCE objective over user and asset embeddings, which naturally compares pairings within a batch. This in theory helps improve MRR (mean reciprocal rank).</p>
         <p>The negatives matter as much as the loss. In-batch negatives are mostly easy, so I added negatives chosen to be hard for the model instead of relying on the batch alone. Together this improved MRR by 50% over the binary cross-entropy baseline.</p>
         <h3>Data infrastructure</h3>
         <ul>
           <li>Built agentic automation of column-level security workflows in Snowflake, along with an embedding-based classifier that finds PII columns so they can be masked.</li>
           <li>Flagged 50+ redundant tables with a deterministic detection engine and a headless Claude agent, cutting clutter in the warehouse.</li>
         </ul>
-        <div class="tags"><span class="tag tag--plain">Contrastive learning</span><span class="tag tag--plain">InfoNCE</span><span class="tag tag--plain">Hard negatives</span><span class="tag tag--plain">Snowflake</span><span class="tag tag--plain">PII detection</span></div>
       </div>
     </article>
     <article class="card role" id="arista">
@@ -65,7 +64,6 @@
           <li>Built a document-processing pipeline on GCP with thousands of PDFs, using Vertex AI hybrid search for semantic and keyword retrieval and a RAG layer that answers with sources and checks for hallucinations.</li>
           <li>Curated a structured dataset of 10,000+ document segments and fine-tuned a Vertex AI baseline model to improve accuracy.</li>
         </ul>
-        <div class="tags"><span class="tag tag--plain">RAG</span><span class="tag tag--plain">Vertex AI</span><span class="tag tag--plain">GCP</span><span class="tag tag--plain">Fine-tuning</span></div>
       </div>
     </article>
   </main>

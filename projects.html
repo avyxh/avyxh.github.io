@@ -37,9 +37,8 @@
       <h2 class="card-title">Systems and inference optimization for transformer serving</h2>
       <div class="meta-row"><span class="tag tag--plain">June 2026 to August 2026</span></div>
       <p>Built up a serving stack starting from nanoGPT and wrote benchmarks that profile latency and memory for three paths: a naive implementation, one with a KV cache, and one with custom kernels.</p>
-      <p>For the custom path I implemented FlashAttention as a Triton kernel and verified it. The attention computation is split into blocks, and an online softmax lets each block be processed without ever storing the full attention matrix in GPU memory.</p>
-      <p>I then extended the infrastructure to handle many requests at once. Continuous batching lets new requests join a running batch instead of waiting for the current batch to finish. Paged KV-cache memory management stores each request's cache in fixed-size pages instead of one large contiguous buffer, so concurrent requests can share GPU memory.</p>
-      <div class="tags"><span class="tag tag--plain">Triton</span><span class="tag tag--plain">FlashAttention</span><span class="tag tag--plain">KV cache</span><span class="tag tag--plain">Continuous batching</span></div>
+      <p>Implemented FlashAttention as a Triton kernel and verified it. The attention computation is split into blocks, and an online softmax lets each block be processed without ever storing the full attention matrix in GPU memory.</p>
+      <p>Extended the infrastructure to handle many requests at once. Continuous batching lets new requests join a running batch instead of waiting for the current batch to finish. Paged KV-cache memory management stores each request's cache in fixed-size pages instead of one large contiguous buffer, so concurrent requests can share GPU memory.</p>
       <!-- To add a code link: <p><a class="btn" href="https://github.com/avyxh/REPO">Code on GitHub</a></p> -->
     </section>
 
@@ -47,8 +46,7 @@
       <h2 class="card-title">Latent dynamics in diffusion models</h2>
       <div class="meta-row"><span class="tag tag--plain">December 2025 to January 2026</span></div>
       <p>Examined the denoising process of a diffusion model and described it with a simple dynamical system. I compressed MNIST into a 16-dimensional latent space with a VAE, trained a diffusion model in that space, and recorded more than 100 denoising trajectories.</p>
-      <p>I then applied <a href="physics-ml.html#seminar">SINDy</a>, sparse regression over a library of polynomial and exponential terms, to find interpretable equations for how the latent state evolves during denoising.</p>
-      <div class="tags"><span class="tag tag--plain">VAE</span><span class="tag tag--plain">Diffusion</span><span class="tag tag--plain">SINDy</span></div>
+      <p>Applied <a href="physics-ml.html#seminar">SINDy</a>, sparse regression over a library of polynomial and exponential terms, to find interpretable equations for how the latent state evolves during denoising.</p>
       <!-- To add a code link: <p><a class="btn" href="https://github.com/avyxh/REPO">Code on GitHub</a></p> -->
     </section>
   </main>
