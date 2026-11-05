@@ -28,18 +28,18 @@
     <div class="page-head">
       <p class="crumbs"><a href="research.html">Research</a></p>
       <h1 class="page-title">Probabilistic ML and autonomous experimentation</h1>
-      <p class="page-sub">Models that know what they don't know, and use that to decide what to measure next.</p>
+      <p class="page-sub">How can we quantify uncertainty in machine learning models?</p>
     </div>
     <div class="banner"><img src="assets/art/probabilistic-ml.jpg" alt=""></div>
     <nav class="tabs" aria-label="Research areas"><a href="physics-ml.html">Physics-ML</a><a href="probabilistic-ml.html" aria-current="page">Probabilistic ML and autonomous experimentation</a><a href="interpretability.html">LLM interpretability</a><a href="projects.html">Projects</a></nav>
 
     <section class="card">
       <h2 class="card-title">Non-stationary Gaussian process kernels</h2>
-      <div class="meta-row"><span class="tag tag--plain">Lawrence Berkeley National Lab</span><span>January 2026 to present</span><span class="tag">Paper in progress</span></div>
+      <div class="meta-row"><span class="tag tag--plain">Lawrence Berkeley National Lab</span><span>January 2026 to present</span></div>
       <p class="pub"><span class="pub-title">The Critical Impact of Non-Stationarity on Bayesian Decision Making for Self-Driving Labs</span></p>
       <p class="authors">M. Noack, A. Gongora, <b>A. Harish</b></p>
-      <p>Self-driving labs use Gaussian processes to decide which experiment to run next. The usual choice, a stationary kernel such as Matérn, assumes the function behaves the same way everywhere. Real measurements don't: a signal can be smooth in one region and change quickly in another.</p>
-      <p>I develop non-stationary kernels (Gibbs, Paciorek–Schervish, and deep kernels) that learn location-dependent variance and length scales from the data. The paper looks at how stationary kernels miscalibrate uncertainty, and how that leads the acquisition function to pick poor next experiments, across chirp signals, topography, and X-ray scattering data.</p>
+      <p>Self-driving labs use Gaussian processes to decide which experiment to run next. The usual choice, a stationary kernel such as Matérn, assumes the function behaves the same way everywhere (constant length scale). This does not typically hold true for real measurements: a signal can be smooth in one region and change quickly in another.</p>
+      <p>I ran experiments with non-stationary kernels (Gibbs, Paciorek–Schervish, and deep kernels) that learn location-dependent variance and length scales from the data. The paper looks at how stationary kernels miscalibrate uncertainty, and how that leads the acquisition function to pick poor next experiments, across chirp signals, topography, and X-ray scattering data.</p>
     </section>
   </main>
 

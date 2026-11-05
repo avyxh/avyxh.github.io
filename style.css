@@ -447,15 +447,14 @@ a.chip:hover { transform: translateY(-1px); border-color: var(--accent); backgro
   width: 56px;
   height: 56px;
   overflow: hidden;
-  border: 1px solid var(--rule);
   border-radius: 12px;
-  background: #fff;
-  color: #55627a;
+  background: #0f1b2d;
+  color: #fff;
   font-family: var(--sans);
   font-size: 1.15rem;
   font-weight: 600;
 }
-.logo img { position: absolute; inset: 0; width: 100%; height: 100%; padding: 9px; object-fit: contain; background: #0f1b2d; border-color: transparent; }
+.logo img { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; object-fit: cover; }
 .role-name { font-size: 1.5rem; letter-spacing: -0.01em; }
 .role-title { margin: 2px 0 14px; color: var(--muted); font-family: var(--sans); font-size: 0.95rem; }
 .role-title .tag { margin-left: 6px; }
@@ -520,13 +519,4 @@ a.chip:hover { transform: translateY(-1px); border-color: var(--accent); backgro
 @media (max-width: 520px) {
   .role { grid-template-columns: 1fr; }
   .logo { margin-bottom: 14px; }
-  
-.role .logo,
-.logos .logo {
-  border: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
-  background: transparent !important;
-}
-.role .logo img { padding: 0; background: transparent; object-fit: contain; }
 }
