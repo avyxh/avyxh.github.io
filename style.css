@@ -521,5 +521,12 @@ a.chip:hover { transform: translateY(-1px); border-color: var(--accent); backgro
   .role { grid-template-columns: 1fr; }
   .logo { margin-bottom: 14px; }
   
-.role .logo { border: none; background: transparent; }
-#coinbase .logo img { padding: 0; object-fit: cover; }
+.role .logo,
+.logos .logo {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+.role .logo img { padding: 0; background: transparent; object-fit: contain; }
+}
