@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avyukth Harish</title>
+  <meta name="description" content="Avyukth Harish: CS, Data Science, and Math at UC Berkeley. Research on LLM interpretability, Gaussian processes, and physics-informed generative models.">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Uncomment to enable math in blog posts or notes (KaTeX). Write $...$ for inline and $$...$$ for display.
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+  -->
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Avyukth Harish</h1>
+      <p class="tagline">Undergraduate at UC Berkeley (CS, Data Science, Mathematics). I work on LLM interpretability, Gaussian process models for scientific data, and time-conditioning in diffusion and flow-matching models.</p>
+      <nav class="links">
+        <a href="mailto:avyukth.harish@berkeley.edu">Email</a>
+        <a href="https://github.com/avyxh">GitHub</a>
+        <a href="https://linkedin.com/in/avy-harish">LinkedIn</a>
+        <a href="cv.pdf">CV</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Research</h2>
+
+      <article>
+        <h3>Berkeley AI Research Lab <span class="date">Jan 2025 – present</span></h3>
+        <ul>
+          <li>Studied how weight tying affects token embeddings across 5+ LLMs using geometric subspace and gradient-scaling experiments (see publications).</li>
+          <li>Building a brain-routed Mixture-of-Blocks language model with Meta FAIR: Qwen3-0.6B blocks routed by sparsemax over fMRI voxel clusters. An LM-only router recovers brain routing at 4.4× chance. Paper in preparation.</li>
+          <li>Restored specialization lost during SFT with a mutual-information routing loss, raising I(token; block) from 0.2 to 1.38.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Lawrence Berkeley National Lab <span class="date">Jan 2026 – present</span></h3>
+        <ul>
+          <li>Developing non-stationary Gaussian process kernels (Gibbs, Paciorek–Schervish, deep kernels) that learn location-dependent variance and length-scales, replacing stationary Matérn kernels on spatially heterogeneous scientific fields.</li>
+          <li>Up to 30% lower RMSE than stationary baselines on chirp, topography, and X-ray scattering data. Characterized how stationary kernels miscalibrate uncertainty and mislead acquisition in Bayesian experimental design.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>International Computer Science Institute <span class="date">Jul 2026 – present</span></h3>
+        <ul>
+          <li>Writing a survey of physical-time conditioning in diffusion and flow-matching transformers (AdaLN/Fourier, lag-sampling, time-coupled diffusion, attention embeddings) for weather, molecular dynamics, and PDE forecasting. Paper in preparation.</li>
+          <li>Unifying GEM-3, Implicit Transfer Operators, and dynamics-informed diffusion, and designing an attention-based time-conditioning mechanism for DiTs with an ablation suite on Lorenz '96.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+      <ul class="pubs">
+        <li>
+          <span class="title">Weight Tying Biases Token Embeddings Towards the Unembedding Space</span><br>
+          A. Lopardo, <b>A. Harish</b>, C. Arnett, A. Gupta. <i>ACL Findings 2026</i>.
+          <!-- TODO: add arXiv link: <a href="https://arxiv.org/abs/XXXX.XXXXX">arXiv</a> -->
+        </li>
+        <li>
+          <span class="title">Cross-lingual Fairness Drift in LLM Moral Reasoning</span><br>
+          E. Xie, A. Chang-Lee, <b>A. Harish</b>, A. Vaidheeswaran. <i>ICLR CAO Workshop 2026</i>.
+        </li>
+        <li>
+          <span class="title">The Critical Impact of Non-Stationarity on Bayesian Decision Making for Self-Driving Labs</span><br>
+          M. Noack, A. Gongora, <b>A. Harish</b>. <i>In progress</i>.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <article>
+        <h3>Transformer serving and inference optimization <span class="date">Jun – Aug 2026</span></h3>
+        <p>nanoGPT benchmarks for latency and memory across naive, KV-cached, and custom-kernel paths. A verified Triton FlashAttention kernel (block-tiled, online softmax), extended with continuous batching and paged KV-cache memory management.
+        <!-- TODO: <a href="https://github.com/avyxh/REPO">Code</a> --></p>
+      </article>
+      <article>
+        <h3>Latent dynamics in diffusion models <span class="date">Dec 2025 – Jan 2026</span></h3>
+        <p>Compressed MNIST to a 16D VAE latent space, trained a diffusion model, collected 100+ denoising trajectories, and used SINDy with polynomial/exponential libraries to recover interpretable equations of the dynamics.
+        <!-- TODO: <a href="https://github.com/avyxh/REPO">Code</a> --></p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <ul class="exp">
+        <li><b>Data Engineer Intern</b>, Coinbase <span class="date">May – Aug 2026</span></li>
+        <li><b>Software Engineer (Contract)</b>, Google DeepMind <span class="date">Feb – May 2026</span></li>
+        <li><b>AI/ML Intern</b>, Arista Networks <span class="date">Feb – Dec 2025</span></li>
+      </ul>
+      <p class="muted">Course staff for Probability &amp; Random Processes, Introduction to Machine Learning, and Discrete Math &amp; Probability. Full details in the <a href="cv.pdf">CV</a>.</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Avyukth Harish</p>
+    </footer>
+  </main>
+</body>
+</html>
