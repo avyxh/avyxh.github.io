@@ -520,4 +520,6 @@ a.chip:hover { transform: translateY(-1px); border-color: var(--accent); backgro
 @media (max-width: 520px) {
   .role { grid-template-columns: 1fr; }
   .logo { margin-bottom: 14px; }
-}
+  
+.role .logo { border: none; background: transparent; }
+#coinbase .logo img { padding: 0; object-fit: cover; }
