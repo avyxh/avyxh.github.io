@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Avyukth Harish</title>
+  <meta name="description" content="Projects by Avyukth Harish: transformer serving and inference optimization, and latent dynamics in diffusion models.">
+  <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap wrap--page">
+      <a class="brand" href="index.html">Avyukth Harish</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="experience.html">Experience</a>
+        <a href="research.html" aria-current="true">Research</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch color theme"><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg></button>
+    </div>
+  </header>
+
+  <main class="wrap wrap--page">
+    <div class="page-head">
+      <p class="crumbs"><a href="research.html">Research</a></p>
+      <h1 class="page-title">Projects</h1>
+      <p class="page-sub">Things I built to understand how systems work.</p>
+    </div>
+    <div class="banner"><img src="assets/art/projects.svg" alt=""></div>
+    <nav class="tabs" aria-label="Research areas"><a href="physics-ml.html">Physics-ML</a><a href="probabilistic-ml.html">Probabilistic ML and autonomous experimentation</a><a href="interpretability.html">LLM interpretability</a><a href="projects.html" aria-current="page">Projects</a></nav>
+
+    <section class="card" id="serving">
+      <h2 class="card-title">Systems and inference optimization for transformer serving</h2>
+      <div class="meta-row"><span class="tag tag--plain">June 2026 to August 2026</span></div>
+      <p>I wanted to understand where time and memory actually go when a transformer generates text, so I built up a serving stack starting from nanoGPT. I wrote benchmarks that profile latency and memory for three paths: a naive implementation, one with a KV cache, and one with custom kernels.</p>
+      <p>For the custom path I implemented FlashAttention as a Triton kernel and verified it. The attention computation is split into blocks, and an online softmax lets each block be processed without ever storing the full attention matrix in GPU memory.</p>
+      <p>I then extended the infrastructure to handle many requests at once. Continuous batching lets new requests join a running batch instead of waiting for the current batch to finish. Paged KV-cache memory management stores each request's cache in fixed-size pages instead of one large contiguous buffer, so concurrent requests can share GPU memory with little waste.</p>
+      <div class="tags"><span class="tag tag--plain">Triton</span><span class="tag tag--plain">FlashAttention</span><span class="tag tag--plain">KV cache</span><span class="tag tag--plain">Continuous batching</span></div>
+      <!-- To add a code link: <p><a class="btn" href="https://github.com/avyxh/REPO">Code on GitHub</a></p> -->
+    </section>
+
+    <section class="card" id="latent-dynamics">
+      <h2 class="card-title">Latent dynamics in diffusion models</h2>
+      <div class="meta-row"><span class="tag tag--plain">December 2025 to January 2026</span></div>
+      <p>This project asks whether the denoising process of a diffusion model can be described by a simple dynamical system. I compressed MNIST into a 16-dimensional latent space with a VAE, trained a diffusion model in that space, and recorded more than 100 denoising trajectories.</p>
+      <p>I then applied <a href="physics-ml.html#seminar">SINDy</a>, sparse regression over a library of polynomial and exponential terms, to find interpretable equations for how the latent state evolves during denoising.</p>
+      <div class="tags"><span class="tag tag--plain">VAE</span><span class="tag tag--plain">Diffusion</span><span class="tag tag--plain">SINDy</span></div>
+      <!-- To add a code link: <p><a class="btn" href="https://github.com/avyxh/REPO">Code on GitHub</a></p> -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap wrap--page">
+      <p>&copy; 2026 Avyukth Harish</p>
+      <p><a href="mailto:avyukth.harish@berkeley.edu">avyukth.harish@berkeley.edu</a></p>
+    </div>
+  </footer>
+</body>
+</html>
